@@ -1,0 +1,7 @@
+#!/bin/bash
+
+if [ -f /input/requirements.txt ] ; then
+  pip install -r /input/requirements.txt
+fi
+
+locust -f /input/locustfile.py $LOCUST_ARGS
